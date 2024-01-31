@@ -1,0 +1,15 @@
+<footer class="footer">
+    <div class="reseau-sociaux">
+        <a href=""><img  src="{{ asset("images/linkedin.png") }}" alt="Linkedin"></a>
+        <a href=""><img src="{{ asset("images/github.png") }}" alt="GitHub"></a>
+    </div>
+    <a class="ml" dir="rtl" href="">Mentions légales</a>
+    {% if app.user %}
+    <div class="container-link-profil" dir="rtl">        
+        <a class="connexion" dir="rtl" href="">Mon Profil</a>
+        <a class="connexion" dir="rtl" href="{#{{ path('app_logout') }}#}">Déconnexion</a>
+    </div>
+    {% else %}
+        <a class="connexion" dir="rtl" href="{#{{ path('app_login') }}#}">Connexion</a>
+    {% endif %}
+</footer>
