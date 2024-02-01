@@ -3,11 +3,11 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block body %}
-<section class="home">
+<section class="home" id="Home">
     <div class="home-content">
-        <h3>Bonjour, je m'appelle</h3>
+        <h3>Bonjour, moi c'est</h3>
         <h1>Stéphanie Meyer</h1>
-        <h3>Je suis <span>Développeuse Web Junior</span></h3>
+        <h3>Je suis <span>{#{{ user.job }}#}Développeuse Web Junior</span></h3>
     </div>
     <div class="home-img">
         <img src="{{ asset("images/avatar-rogne.png") }}" alt="Mon avatar">
@@ -33,14 +33,6 @@
     </div>
     <div class="skills">
         <h3>Compétences</h3>
-        {#<i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3'></i>
-        <i class="fa-brands fa-php"></i>
-        <i class="fa-brands fa-symfony"></i>
-        <i class="fa-solid fa-database"></i>
-        <i class='bx bxl-javascript'></i>
-        <i class='bx bxl-figma'></i>
-        <i class='bx bxl-github'></i>#}
         <div class="skills-s">HTML</div>
         <div class="skills-s">CSS</div>
         <div class="skills-s">PHP</div>
@@ -79,6 +71,47 @@
             <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
             <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
         </div>
+    </div>
+</section>
+<section class="container-contact" id="Contact">
+    <div class="cadre">
+        <h3>Contact</h3>
+        <form action="/dashboard" method="post">
+            <ul>
+                <li>
+                    <label for="name">Nom&nbsp;:</label>
+                    <input type="text" id="firstname" name="user_firstname" />
+                </li>
+                <li>
+                    <label for="name">Prénom&nbsp;:</label>
+                    <input type="text" id="lastename" name="user_lastname" />
+                </li>
+                <li>
+                    <label for="mail">E-mail&nbsp;:</label>
+                    <input type="email" id="mail" name="user_mail" />
+                </li>
+                <li>
+                    <label for="mail">Téléphone&nbsp;:</label>
+                    <input type="int" id="phone" name="user_phone" />
+                </li>
+                <li>
+                    <label for="name">Sujet&nbsp;:</label>
+                    <input type="text" id="subject" name="user_subject" />
+                </li>
+                <li>
+                    <label for="msg">Message&nbsp;:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="info">
+        <i class='bx bx-current-location'></i>
+        <h4>{#{ user.localisation }#}Les sables d'Olonne +/- 30km</h4>
+        <i class='bx bx-envelope' ></i>
+        <h4>{#{ user.email }#}stephanie2510@gmail.com</h4>
+        <i class='bx bx-phone' ></i>
+        <h4>{#{ user.phonenumber }#}0669690942</h4>
     </div>
 </section>
 {% endblock %}

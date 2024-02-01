@@ -35,6 +35,7 @@ h2, h3, h4, p {
 
 /* Navbar */
 nav {
+    /*position: fixed;*/
     height: 6rem;
     padding: 1rem 6rem 1rem 6rem;
     display: grid;

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SkillsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SkillsRepository::class)]
@@ -18,6 +20,14 @@ class Skills
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $cathegory = null;
+
+    #[ORM\ManyToMany(targetEntity: Projects::class, inversedBy: 'skills')]
+    private Collection $projects;
+
+    public function __construct()
+    {
+        $this->projects = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -44,6 +54,30 @@ class Skills
     public function setCathegory(?string $cathegory): static
     {
         $this->cathegory = $cathegory;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Projects>
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(Projects $project): static
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects->add($project);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(Projects $project): static
+    {
+        $this->projects->removeElement($project);
 
         return $this;
     }
