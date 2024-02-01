@@ -1,0 +1,20 @@
+
+.h3 {
+    padding: 5rem;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 50rem;
+    height: 30rem; 
+    align-items: center;
+    border: rgb(255, 255, 255) solid;
+    border-radius: 50px;
+    background: linear-gradient(217deg, rgba(248, 1, 186, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(140deg, rgba(45, 45, 231, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(380deg, rgba(151, 0, 252, 0.8), rgba(0,0,255,0) 70.71%);
+    box-shadow: .2rem .2rem .4rem black;
+}
