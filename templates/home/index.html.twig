@@ -3,16 +3,82 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block body %}
-<style>
-    
-</style>
-
-<div class="example-wrapper">
-    <h1></h1>
-
-    {#<ul>
-        <li><code><a href=""></a></code></li>
-        <li><code><a href=""></a></code></li>
-    </ul>#}
-</div>
+<section class="home">
+    <div class="home-content">
+        <h3>Bonjour, je m'appelle</h3>
+        <h1>Stéphanie Meyer</h1>
+        <h3>Et je suis une <span>Développeuse Web Junior</span></h3>
+    </div>
+    <div class="home-img">
+        <img src="{{ asset("images/avatar-rogne.png") }}" alt="Mon avatar">
+    </div>
+</section>
+<section class="profil-p">
+    <div class="aboutme">
+        <h3>A propos de moi</h3>
+        <p>Après plus de 15 années dans le secteur de l'industrie 
+        nautique, j’ai choisi de me reconvertir dans le Développement 
+        Web. A la suite d’une formation intensive, je recherche un 
+        stage me permettant de compléter ma formation, d’approfondir 
+        mes compétences, de mettre en avant mon adaptabilité et ma 
+        détermination au sein d'un environnement dynamique.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit 
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+        occaecat cupidatat non proident, sunt in culpa qui officia 
+        deserunt mollit anim id est laborum</p>
+    </div>
+    <div class="skills">
+        <h3>Compétences</h3>
+        {#<i class='bx bxl-html5'></i>
+        <i class='bx bxl-css3'></i>
+        <i class="fa-brands fa-php"></i>
+        <i class="fa-brands fa-symfony"></i>
+        <i class="fa-solid fa-database"></i>
+        <i class='bx bxl-javascript'></i>
+        <i class='bx bxl-figma'></i>
+        <i class='bx bxl-github'></i>#}
+        <div class="skills-s">HTML</div>
+        <div class="skills-s">CSS</div>
+        <div class="skills-s">PHP</div>
+        <div class="skills-s">Symfony</div>
+        <div class="skills-s">MySQL</div>
+        <div class="skills-s">JavaScript</div>
+        <div class="skills-s">Figma</div>
+        <div class="skills-s">GitHub</div>
+    </div>
+</section>
+<section class="portfolio-p">
+    <h3>Projets</h3>
+    <div class="projets-p">
+       {#} {% for projet in projets %}
+            <h4>"{{projet.name}}"</h4>
+            <p>"{{ projects.description }}"</p>
+        {% endfor %} #}
+        <div class="wg">
+            <h4>Wildy Gaming</h4>
+            <img src="{{ asset("images/wildygaming.png") }}" alt="Wildy Gaming">
+            <img src="{{ asset("images/wildygaming2.png") }}" alt="Wildy Gaming">
+            <img src="{{ asset("images/wildygaming3.png") }}" alt="Wildy Gaming">
+            <img src="{{ asset("images/wildygaming4.png") }}" alt="Wildy Gaming">
+        </div>
+        <div class="wt">
+            <h4>Wild Tour</h4>
+            <img src="{{ asset("images/wildtour.png") }}" alt="Wild Tour">
+            <img src="{{ asset("images/wildtour3.png") }}" alt="Wild Tour">
+            <img src="{{ asset("images/wildtour4.png") }}" alt="Wild Tour">
+            <img src="{{ asset("images/wildtour5.png") }}" alt="Wild Tour">
+            <img src="{{ asset("images/wildtour6.png") }}" alt="Wild Tour">
+        </div>
+        <div class="sg">
+            <h4>Stras'Gite</h4>
+            <img src="{{ asset("images/strasgite.png") }}" alt="Stras'Gite">
+            <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
+            <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
+        </div>
+    </div>
+</section>
 {% endblock %}

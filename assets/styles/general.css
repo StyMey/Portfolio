@@ -10,10 +10,16 @@ nav, footer {
     color: #fff;
 }
 
-body main {
+body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(#051B30, #0c3f6e);
+    background: linear-gradient(#180131, #4d098d);
     height: 100vh;
+    color: #fff;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#180131, #4d098d);
     color: #fff;
 }
 
@@ -33,7 +39,7 @@ nav {
     padding: 1rem 6rem 1rem 6rem;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
-    background-color: #051B30;
+    background-color: #180131;
 }
 
 nav img {
@@ -46,8 +52,14 @@ nav img {
 nav a {
     color: #fff;
     font-size: 2rem;
+    font-weight: bolder;
     align-self: center;
     justify-self: center;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #588ff5;  
 }
 
 /* Footer */
@@ -57,7 +69,7 @@ footer {
     padding: 4rem 8rem 0 0;
     height: 6rem;
     align-items: start;
-    background-color: #0c3f6e;
+    background-color: #4d098d;
 }
 
 .reseau-sociaux {
@@ -67,9 +79,13 @@ footer {
     margin-left: 4rem;
 }
 
-.reseau-sociaux img {
-    width: 3rem;
-    margin: 0 4rem 0 4rem;
+.reseau-sociaux i {
+    width: 8rem;
+    margin: 0 3rem 0 1rem;
+}
+
+.bx {
+    zoom: 200%;
 }
 
 .ml {
@@ -83,4 +99,10 @@ footer {
 footer a {
     color: #fff;
     font-size: 1.5rem;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: rgb(88, 143, 245);
+    font-weight: bolder;
 }
