@@ -7,13 +7,13 @@
     <div class="home-content">
         <h3>Bonjour, je m'appelle</h3>
         <h1>Stéphanie Meyer</h1>
-        <h3>Et je suis une <span>Développeuse Web Junior</span></h3>
+        <h3>Je suis <span>Développeuse Web Junior</span></h3>
     </div>
     <div class="home-img">
         <img src="{{ asset("images/avatar-rogne.png") }}" alt="Mon avatar">
     </div>
 </section>
-<section class="profil-p">
+<section class="profil-p" id="Profil">
     <div class="aboutme">
         <h3>A propos de moi</h3>
         <p>Après plus de 15 années dans le secteur de l'industrie 
@@ -51,10 +51,10 @@
         <div class="skills-s">GitHub</div>
     </div>
 </section>
-<section class="portfolio-p">
+<section class="portfolio-p" id="Projets">
     <h3>Mes Projets</h3>
     <div class="projets-p">
-       {#} {% for projet in projets %}
+       {# {% for projet in projets %}
             <h4>"{{projet.name}}"</h4>
             <p>"{{ projects.description }}"</p>
         {% endfor %} #}
