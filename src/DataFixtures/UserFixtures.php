@@ -5,10 +5,16 @@ namespace App\DataFixtures;
 use App\Entity\User;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 
 class UserFixtures extends Fixture
 {
+    public function __construct(private UserPasswordHasherInterface $userPassHasher)
+    {
+        
+    }
+
     public function load(ObjectManager $manager): void
     {
         $user = new User();
@@ -16,7 +22,7 @@ class UserFixtures extends Fixture
         $user->setPhonenumber('0669690942');
         $user->setEmail('stephanie2510@gmail.com');
         $user->setLocalisation('Les sables d\'Olonne +/- 30km');
-        $user->setPassword('jesuisCodeuse67');
+        $user->setPassword($this->userPassHasher->hashPassword($user, 'jesuisCodeuse67'));
         $user->setAboutme('Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna 
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 

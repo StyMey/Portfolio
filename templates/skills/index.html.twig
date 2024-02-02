@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Skills{% endblock %}
+
+{% block body %}
+<h1>Mes Skills</h1>
+<table class="container-s">
+    <a class="btn-s btn-lg btn-primary" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
+    <thead class="firstligne">
+        <tr>
+            <th class="th-skills">Id</th>
+            <th class="th-skills">Nom</th>
+            <th class="th-skills">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for skills in skillss %}
+        <tr class="tr-skills">
+            <td class="td-skills">{{ skills.id }}</td>
+            <td class="td-skills">{{ skills.name }}</td>
+            <td class="td-skills">
+                <a href="" class="edit">
+                    <i class='bx bx-edit-alt'></i>
+                </a>
+                <br>
+                <a href="" class="delete">
+                    <i class='bx bx-trash'></i>
+                </a>
+            </td>
+        </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

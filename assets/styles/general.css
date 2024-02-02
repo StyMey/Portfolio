@@ -99,6 +99,7 @@ footer {
 
 .container-link-profil {
     grid-column-start: 3;
+    text-align: right;
 }
 
 footer a {

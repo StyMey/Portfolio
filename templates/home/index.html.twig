@@ -76,33 +76,34 @@
 <section class="container-contact" id="Contact">
     <div class="cadre">
         <h3>Contact</h3>
-        <form action="/dashboard" method="post">
+        <form class="form1" action="/dashboard" method="post">
             <ul>
-                <li>
+                <li class="fistname">
                     <label for="name">Nom&nbsp;:</label>
                     <input type="text" id="firstname" name="user_firstname" />
                 </li>
-                <li>
-                    <label for="name">Prénom&nbsp;:</label>
-                    <input type="text" id="lastename" name="user_lastname" />
+                <li class="lastname">
+                    <label class="name" for="name">Prénom&nbsp;:</label>
+                    <input type="text" id="lastname" name="user_lastname" />
                 </li>
-                <li>
+                <li class="mail">
                     <label for="mail">E-mail&nbsp;:</label>
                     <input type="email" id="mail" name="user_mail" />
                 </li>
-                <li>
-                    <label for="mail">Téléphone&nbsp;:</label>
+                <li class="phone">
+                    <label for="phone">Téléphone&nbsp;:</label>
                     <input type="int" id="phone" name="user_phone" />
                 </li>
-                <li>
-                    <label for="name">Sujet&nbsp;:</label>
+                <li class="subject">
+                    <label for="subject">Sujet&nbsp;:</label>
                     <input type="text" id="subject" name="user_subject" />
                 </li>
-                <li>
+                <li class="msg">
                     <label for="msg">Message&nbsp;:</label>
                     <textarea id="msg" name="user_message"></textarea>
                 </li>
             </ul>
+            <button class="btn btn-lg btn-primary" type="submit">Envoyer</button>
         </form>
     </div>
     <div class="info">

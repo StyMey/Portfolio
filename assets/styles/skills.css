@@ -1,0 +1,6 @@
+.container-s {
+    display: flex;
+    justify-content: center;
+    border: rgb(250, 248, 248) solid;
+}
+
