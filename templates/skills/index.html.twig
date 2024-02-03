@@ -3,22 +3,22 @@
 {% block title %}Mes Skills{% endblock %}
 
 {% block body %}
-<h1>Mes Skills</h1>
+<h1 class="h1-skills">Mes Skills</h1>
 <table class="container-s">
-    <a class="btn-s btn-lg btn-primary" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
-    <thead class="firstligne">
+    <a class="btn-new-s" type="button" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
+    <thead>
         <tr>
-            <th class="th-skills">Id</th>
-            <th class="th-skills">Nom</th>
-            <th class="th-skills">Actions</th>
+            <th class="th-skills1">Id</th>
+            <th class="th-skills2">Nom</th>
+            <th class="th-skills3">Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for skills in skillss %}
         <tr class="tr-skills">
-            <td class="td-skills">{{ skills.id }}</td>
-            <td class="td-skills">{{ skills.name }}</td>
-            <td class="td-skills">
+            <td class="td-skills1">{{ skills.id }}</td>
+            <td class="td-skills2">{{ skills.name }}</td>
+            <td class="td-skills3">
                 <a href="" class="edit">
                     <i class='bx bx-edit-alt'></i>
                 </a>
