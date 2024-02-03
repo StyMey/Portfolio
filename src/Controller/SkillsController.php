@@ -35,7 +35,7 @@ class SkillsController extends AbstractController
             $entityManager->persist($skills);
             $entityManager->flush();
 
-            return $this->redirectToRoute('skills_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('/skills/new.html.twig', [
