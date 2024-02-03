@@ -125,9 +125,9 @@
                 linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
 }
 
-.form1 {
-    /*display: flex;*/
-}
+/*.form1 {
+    display: flex;
+}*/
 
 .container-contact h3 {
     font-size: 3rem;
