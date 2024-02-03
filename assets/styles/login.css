@@ -1,0 +1,66 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22vh;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: 30rem; 
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(217deg, rgba(248, 1, 186, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(45, 45, 231, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
+    box-shadow: .2rem .2rem .4rem black;
+}
+
+.h3 {
+    padding: 1rem 0 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.form2 {
+    display: grid;
+}
+
+label {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: .5rem;
+}
+
+input {
+    margin: 1rem;
+    height: 2.5rem;
+    width: 30rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+button {
+    height: 2.5rem;
+    width: 15rem;
+    position: relative;
+    left: 9rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: .2rem .2rem .2rem black;
+    cursor: pointer;
+    background-color:rgb(245, 245, 247);
+    color: #613aee;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.alert {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}

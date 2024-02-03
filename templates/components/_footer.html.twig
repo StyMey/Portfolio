@@ -6,10 +6,11 @@
     <a class="ml" dir="rtl" href="">Mentions légales</a>
     {% if app.user %}
     <div class="container-link-profil">        
-        <a class="connexion" dir="rtl" href="">Mon Profil</a>
-        <a class="connexion" dir="rtl" href="{#{{ path('app_logout') }}#}">Déconnexion</a>
+        <a class="connexion" dir="rtl" href="{{ path('home') }}">Dashboard</a>
+        <a class="connexion" dir="rtl" href="{{ path('app_logout') }}">Déconnexion</a>
     </div>
     {% else %}
-        <a class="connexion" dir="rtl" href="{#{{ path('app_login') }}#}">Connexion</a>
+        <a class="connexion" dir="rtl" href="{{ path('app_login') }}">Connexion</a>
     {% endif %}
+    <a href="#" class="button"><i class='bx bxs-hand-up'></i></a>
 </footer>

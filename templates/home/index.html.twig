@@ -3,17 +3,17 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block body %}
-<section class="home">
+<section class="home" id="Home">
     <div class="home-content">
-        <h3>Bonjour, je m'appelle</h3>
+        <h3>Bonjour, moi c'est</h3>
         <h1>Stéphanie Meyer</h1>
-        <h3>Et je suis une <span>Développeuse Web Junior</span></h3>
+        <h3>Je suis <span>{#{{ user.job }}#}Développeuse Web Junior</span></h3>
     </div>
     <div class="home-img">
         <img src="{{ asset("images/avatar-rogne.png") }}" alt="Mon avatar">
     </div>
 </section>
-<section class="profil-p">
+<section class="profil-p" id="Profil">
     <div class="aboutme">
         <h3>A propos de moi</h3>
         <p>Après plus de 15 années dans le secteur de l'industrie 
@@ -33,14 +33,6 @@
     </div>
     <div class="skills">
         <h3>Compétences</h3>
-        {#<i class='bx bxl-html5'></i>
-        <i class='bx bxl-css3'></i>
-        <i class="fa-brands fa-php"></i>
-        <i class="fa-brands fa-symfony"></i>
-        <i class="fa-solid fa-database"></i>
-        <i class='bx bxl-javascript'></i>
-        <i class='bx bxl-figma'></i>
-        <i class='bx bxl-github'></i>#}
         <div class="skills-s">HTML</div>
         <div class="skills-s">CSS</div>
         <div class="skills-s">PHP</div>
@@ -51,10 +43,10 @@
         <div class="skills-s">GitHub</div>
     </div>
 </section>
-<section class="portfolio-p">
-    <h3>Projets</h3>
+<section class="portfolio-p" id="Projets">
+    <h3>Mes Projets</h3>
     <div class="projets-p">
-       {#} {% for projet in projets %}
+       {# {% for projet in projets %}
             <h4>"{{projet.name}}"</h4>
             <p>"{{ projects.description }}"</p>
         {% endfor %} #}
@@ -79,6 +71,48 @@
             <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
             <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
         </div>
+    </div>
+</section>
+<section class="container-contact" id="Contact">
+    <div class="cadre">
+        <h3>Contact</h3>
+        <form class="form1" action="/dashboard" method="post">
+            <ul>
+                <li class="fistname">
+                    <label for="name">Nom&nbsp;:</label>
+                    <input type="text" id="firstname" name="user_firstname" />
+                </li>
+                <li class="lastname">
+                    <label class="name" for="name">Prénom&nbsp;:</label>
+                    <input type="text" id="lastname" name="user_lastname" />
+                </li>
+                <li class="mail">
+                    <label for="mail">E-mail&nbsp;:</label>
+                    <input type="email" id="mail" name="user_mail" />
+                </li>
+                <li class="phone">
+                    <label for="phone">Téléphone&nbsp;:</label>
+                    <input type="int" id="phone" name="user_phone" />
+                </li>
+                <li class="subject">
+                    <label for="subject">Sujet&nbsp;:</label>
+                    <input type="text" id="subject" name="user_subject" />
+                </li>
+                <li class="msg">
+                    <label for="msg">Message&nbsp;:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+            </ul>
+            <button class="btn btn-lg btn-primary" type="submit">Envoyer</button>
+        </form>
+    </div>
+    <div class="info">
+        <i class='bx bx-current-location'></i>
+        <h4>{#{ user.localisation }#}Les sables d'Olonne +/- 30km</h4>
+        <i class='bx bx-envelope' ></i>
+        <h4>{#{ user.email }#}stephanie2510@gmail.com</h4>
+        <i class='bx bx-phone' ></i>
+        <h4>{#{ user.phonenumber }#}0669690942</h4>
     </div>
 </section>
 {% endblock %}

@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 6rem 5% 9rem;
+    padding: 20rem 5% 15rem;
 }
 
 .aboutme {
@@ -56,30 +56,24 @@
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     max-width: 50rem;
+    justify-items: center;
 }
 
 .skills h3 {
+    grid-column: 1 / 4;
     font-size: 2.6rem;
-    padding-bottom: 1rem;
+    padding-bottom: 6rem;
 }
-
-/*.skills td {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    font-size: 5rem;
-    padding: .5rem;
-}*/
 
 .skills-s {
     padding: 1rem 2rem;
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1.6rem;
-    background: rgba(153,153,153,.2);
+    background: rgba(165, 164, 164, 0.2);
     border-radius: 5px;
     font-weight: 600;
     color: #6e6e6e;
@@ -95,7 +89,7 @@
 
 .portfolio-p h3 {
     font-size: 2.6rem;
-    padding: 2rem;
+    padding: 2rem 0 4rem;
 }
 
 .projets-p {
@@ -112,4 +106,60 @@
 
 .projets-p h4 {
     font-size: 1.8rem;
+}
+
+/* Section Contact */
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0 3rem;
+}
+
+.cadre {
+    border-radius: 50px;
+    padding: 3rem;
+    box-shadow: .3rem .3rem .7rem .4rem rgb(31, 31, 31);
+    background: linear-gradient(196deg, rgba(226, 92, 193, 0.8), rgba(255,0,0,0) 50.71%),
+                linear-gradient(146deg, rgba(33, 33, 218, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
+}
+
+.form1 {
+    /*display: flex;*/
+}
+
+.container-contact h3 {
+    font-size: 3rem;
+    padding: 0 0 4rem;
+    text-align: center;
+}
+
+li {
+    display: grid;
+}
+
+#msg {
+    height: 25rem;
+    width: 29rem;
+    border-radius: 20px;
+    align-self: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.info i {
+    justify-content: space-evenly;
+}
+
+.info h4 {
+    text-align: start;
 }
