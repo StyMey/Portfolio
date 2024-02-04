@@ -8,12 +8,14 @@
 /* Mes skills */
 .msg-flash {
     padding-left: 5rem;
-    margin: 2rem 0;
+    margin: 2rem 50rem 2rem 0rem;
+    text-align: center;
 }
 
 .flash-success {
-    color: #5ec084;
-    border: #efeef1 solid;
+    color: #038f38;
+    background-color: #aee4ba;
+    font-size: 2rem;
 }
 
 .btn-new-s {
@@ -114,6 +116,13 @@ label {
     font-size: 1.4rem;
 }
 
-.msg-flash {
-    color: #5ec084;
+.uk-alert-danger { /*form-error*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: #b67373;
+    color: rgb(128, 20, 20);
+    text-align: center;
+    border-radius: 30px;
+    border: solid #b67373;
 }

@@ -78,14 +78,6 @@ class SkillsController extends AbstractController
     #[Route('/skills/{id}/delete', name: 'skills_delete', methods: ['GET'])]
     public function delete(Skills $skills, EntityManagerInterface $entityManager): Response
     {
-        if (!$skills) {
-            $this->addFlash(
-                'notice',
-                'Le skill n\'existe pas'
-            );
-            return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
-        }
-
         $entityManager->remove($skills);
         $entityManager->flush();
 
