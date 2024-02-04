@@ -1,12 +1,19 @@
 .h1-skills {
     display: flex;
     justify-content: center;
+    font-size: 2.6rem;
+    margin: 1rem;
 }
 
 /* Mes skills */
-.container-s {
-    display: grid;
+.msg-flash {
     padding-left: 5rem;
+    margin: 2rem 0;
+}
+
+.flash-success {
+    color: #5ec084;
+    border: #efeef1 solid;
 }
 
 .btn-new-s {
@@ -15,13 +22,34 @@
     border-radius: 10px;
     padding: 0 .5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 5rem;
+    box-shadow: .2rem .2rem .2rem black;
+    color: #613aee;
+}
+
+.container-s {
+    display: grid;
+    grid-template-rows: repeat(auti-fit, minmax(11.6rem, 1fr));
+    padding-left: 5rem;
 }
 
 thead {
     padding-top: 3rem;
     padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+tbody {
+    font-size: 1.2rem;
+    grid-gap: 2rem
+}
+
+.tr-skill {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .th-skills1 {
@@ -40,19 +68,52 @@ thead {
     padding: 1rem;
 }
 
-/* Nouveau skill */
-.container-ns {
-    display: flex;
-    
-    justify-content: center;
-    border: beige solid;
+.td-skills3 {
+    padding-left: 3.5rem;
 }
 
-h1 {
-    justify-content: center;
+.edit {
+    color: #7e7e7e;
+}
+
+.delete {
+    color: #b67373;
+}
+
+/* Nouveau skill */
+.cont-ns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22vh;
+}
+
+.container-ns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+    height: 33rem;
+    background: linear-gradient(217deg, rgba(248, 1, 186, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(45, 45, 231, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
+    box-shadow: .2rem .2rem .4rem black;
+    border-radius: 50px;
 }
 
 #skills {
     display: flex;
     justify-content: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.msg-flash {
+    color: #5ec084;
 }

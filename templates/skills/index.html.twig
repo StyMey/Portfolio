@@ -4,7 +4,14 @@
 
 {% block body %}
 <h1 class="h1-skills">Mes Skills</h1>
-<table class="container-s">
+<div class="msg-flash">
+    {% for message in app.flashes('notice') %}
+        <div class="flash-success">
+            <h3>{{ message }}</h3>
+        </div>
+    {% endfor %}
+</div>
+<table class="container-s">  
     <a class="btn-new-s" type="button" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
     <thead>
         <tr>
@@ -19,11 +26,11 @@
             <td class="td-skills1">{{ skills.id }}</td>
             <td class="td-skills2">{{ skills.name }}</td>
             <td class="td-skills3">
-                <a href="" class="edit">
+                <a href="{{ path('skills_edit', {'id':skills.id}) }}" class="edit">
                     <i class='bx bx-edit-alt'></i>
                 </a>
                 <br>
-                <a href="" class="delete">
+                <a href="{{ path('skills_delete', {'id':skills.id}) }}" class="delete">
                     <i class='bx bx-trash'></i>
                 </a>
             </td>
