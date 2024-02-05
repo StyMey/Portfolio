@@ -1,6 +1,5 @@
 /* Section Home */
 .home {
-    /*position: relative;*/
     width: 80%;
     height: 90vh;
     display: flex;
@@ -29,7 +28,7 @@
 }
 
 .home-img img {
-    max-width: 40rem;
+    max-width: 35rem;
 }
 
 /* Section Profil */
@@ -37,7 +36,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 13rem 5% 15rem;
+    padding: 8rem 5% 5rem;
 }
 
 .aboutme {
@@ -84,7 +83,7 @@
 /* Section Projet */
 .portfolio-p {
     text-align: center;
-    padding: 5rem 10rem;
+    padding: 4rem 10rem;
 }
 
 .portfolio-p h3 {
@@ -135,13 +134,36 @@
     text-align: center;
 }
 
-li {
+ul {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+
+#subject {
+    grid-column: 1 / 4;
+    width: 60rem;
+}
+
+.subject {
+    text-align: start;
+}
+
+.msg {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+}
+
+label {
+    text-align: left;
+}
+
+/*li {
+    display: grid;
+}*/
 
 #msg {
     height: 25rem;
-    width: 29rem;
+    width: 59rem;
     border-radius: 20px;
     align-self: center;
     font-size: 1.2rem;
@@ -153,13 +175,13 @@ li {
 .info {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem 0 2rem 0;
 }
 
 .info i {
-    justify-content: space-evenly;
+    padding: 0 0.5rem 0 2rem;
 }
 
 .info h4 {
-    text-align: start;
+    font-weight: 100;
 }
