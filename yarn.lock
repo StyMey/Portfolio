@@ -4187,6 +4187,11 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+uikit@^3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.18.0.tgz#c024f93b46b2c82a09525f097377aa5829cb1c9e"
+  integrity sha512-mheK4lxQRIkgUOL9V285aM9icabCn8yEMQH6t5Xzuue0lDVzr9jWK5+FxBjLGT4Mzsplhi6HVbZVa2EIcD8SUg==
+
 undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"

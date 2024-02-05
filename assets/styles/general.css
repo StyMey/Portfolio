@@ -39,33 +39,40 @@ h2, h3, h4, p {
 
 /* Navbar */
 nav {
-    /*position: fixed;*/
+    position: fixed;
+    justify-content: space-between;
+    width: 90%;
     height: 6rem;
-    padding: 1rem 6rem 1rem 6rem;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding: 0 10rem 0 2rem;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
     background-color: #180131;
 }
 
-nav img {
-    height: 5rem;
-    width: 5rem;
+a img {
+    height: 4rem;
+    width: 4rem;
     align-self: center;
     justify-content: start;
 }
 
-nav a {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bolder;
+.logo {
     align-self: center;
-    justify-self: center;
-    transition: .3s;
 }
 
-nav a:hover {
-    color: #588ff5;  
+.menu-nav a {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    transition: .3s;
+    gap: 6rem;
+    color: #fff;
 }
+
+/*.menu-nav:hover {
+    color: #588ff5;  
+}*/
 
 /* Footer */
 footer {
