@@ -1,8 +1,8 @@
 /* Section Home */
 .home {
-    position: relative;
+    /*position: relative;*/
     width: 80%;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .home-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -24,12 +24,12 @@
 }
 
 .home-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 .home-img img {
-    max-width: 50rem;
+    max-width: 40rem;
 }
 
 /* Section Profil */
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20rem 5% 15rem;
+    padding: 13rem 5% 15rem;
 }
 
 .aboutme {
@@ -84,7 +84,7 @@
 /* Section Projet */
 .portfolio-p {
     text-align: center;
-    padding: 4rem 10rem;
+    padding: 5rem 10rem;
 }
 
 .portfolio-p h3 {
@@ -98,7 +98,7 @@
 }
 
 .projets-p img {
-    width: 50rem;
+    width: 30rem;
     height: auto;
     grid-gap: 1rem;
     padding-top: 1rem;
