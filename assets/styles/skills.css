@@ -120,9 +120,7 @@ label {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: bolder;
-    background-color: #b67373;
-    color: rgb(128, 20, 20);
+    color: rgb(172, 26, 26);
     text-align: center;
     border-radius: 30px;
-    border: solid #b67373;
 }
