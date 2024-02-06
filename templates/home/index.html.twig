@@ -45,32 +45,53 @@
 </section>
 <section class="portfolio-p" id="Projets">
     <h3>Mes Projets</h3>
-    <div class="projets-p">
+    <div class="cards">{#projets-p}
        {# {% for projet in projets %}
             <h4>"{{projet.name}}"</h4>
             <p>"{{ projects.description }}"</p>
         {% endfor %} #}
-        <div class="wg">
-            <h4>Wildy Gaming</h4>
-            <img src="{{ asset("images/wildygaming.png") }}" alt="Wildy Gaming">
-            <img src="{{ asset("images/wildygaming2.png") }}" alt="Wildy Gaming">
-            <img src="{{ asset("images/wildygaming3.png") }}" alt="Wildy Gaming">
-            <img src="{{ asset("images/wildygaming4.png") }}" alt="Wildy Gaming">
-        </div>
-        <div class="wt">
-            <h4>Wild Tour</h4>
-            <img src="{{ asset("images/wildtour.png") }}" alt="Wild Tour">
-            <img src="{{ asset("images/wildtour3.png") }}" alt="Wild Tour">
-            <img src="{{ asset("images/wildtour4.png") }}" alt="Wild Tour">
-            <img src="{{ asset("images/wildtour5.png") }}" alt="Wild Tour">
-            <img src="{{ asset("images/wildtour6.png") }}" alt="Wild Tour">
-        </div>
-        <div class="sg">
-            <h4>Stras'Gite</h4>
-            <img src="{{ asset("images/strasgite.png") }}" alt="Stras'Gite">
-            <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
-            <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
-        </div>
+        <article class="card">{#wg#}
+            <header>
+                <h4>Wildy Gaming</h4>
+            </header>    
+                <img src="{{ asset("images/wildygaming.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming2.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming3.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming4.png") }}" alt="Wildy Gaming">
+            <div class="content">
+                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua.</p>
+            </div>
+        </article>
+        <article class="card">
+            <header>
+                <h4>Wild Tour</h4>
+            </header> 
+                <img src="{{ asset("images/wildtour.png") }}" alt="Wild Tour">
+                <img src="{{ asset("images/wildtour3.png") }}" alt="Wild Tour">
+                <img src="{{ asset("images/wildtour4.png") }}" alt="Wild Tour">
+                <img src="{{ asset("images/wildtour5.png") }}" alt="Wild Tour">
+                <img src="{{ asset("images/wildtour6.png") }}" alt="Wild Tour">
+            <div class="content">
+                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua.</p>
+            </div>
+        </article>
+        <article class="card">
+            <header>
+                <h4>Stras'Gite</h4>
+            </header> 
+                <img src="{{ asset("images/strasgite.png") }}" alt="Stras'Gite">
+                <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
+                <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
+            <div class="content">
+                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua.</p>
+            </div>
+        </article>
     </div>
 </section>
 <section class="container-contact" id="Contact">
@@ -103,12 +124,12 @@
                     <textarea id="msg" name="user_message"></textarea>
                 </li>
             </ul>
-            <button class="btn btn-lg btn-primary" type="submit">Envoyer</button>
+            <button class="btn-c" type="submit">Envoyer</button>
         </form>
     </div>
     <div class="info">
         <i class='bx bx-current-location'></i>
-        <h4>{#{ user.localisation }#}Les sables d'Olonne +/- 30km</h4>
+        <h4>{#{ user.localisation }#}Les Sables d'Olonne +/- 30km</h4>
         <i class='bx bx-envelope' ></i>
         <h4>{#{ user.email }#}stephanie2510@gmail.com</h4>
         <i class='bx bx-phone' ></i>

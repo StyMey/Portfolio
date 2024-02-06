@@ -1,6 +1,5 @@
 /* Section Home */
 .home {
-    /*position: relative;*/
     width: 80%;
     height: 90vh;
     display: flex;
@@ -29,7 +28,7 @@
 }
 
 .home-img img {
-    max-width: 40rem;
+    max-width: 35rem;
 }
 
 /* Section Profil */
@@ -37,7 +36,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 13rem 5% 15rem;
+    padding: 8rem 5% 5rem;
 }
 
 .aboutme {
@@ -51,7 +50,7 @@
 }
 
 .aboutme p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 2rem 5rem 2rem;
 }
 
@@ -69,7 +68,7 @@
 }
 
 .skills-s {
-    padding: 1rem 2rem;
+    padding: .6rem 1.3rem;
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1.6rem;
@@ -84,7 +83,7 @@
 /* Section Projet */
 .portfolio-p {
     text-align: center;
-    padding: 5rem 10rem;
+    padding: 4rem 10rem;
 }
 
 .portfolio-p h3 {
@@ -92,20 +91,37 @@
     padding: 2rem 0 4rem;
 }
 
-.projets-p {
+.cards { /*projets-p*/
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    grid-gap: 20px;
+    align-items: baseline;
 }
 
-.projets-p img {
-    width: 30rem;
-    height: auto;
-    grid-gap: 1rem;
-    padding-top: 1rem;
+.card {
+    display: grid;
+    grid-template-rows: max-content 12.5rem 1fr;
+    border-radius: 15px;
+    background: linear-gradient(196deg, rgba(226, 92, 193, 0.8), rgba(255,0,0,0) 50.71%),
+                linear-gradient(146deg, rgba(33, 33, 218, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
 }
 
-.projets-p h4 {
+header {
     font-size: 1.8rem;
+}
+
+.card img {
+    object-fit: cover;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.card-p {
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Section Contact */
@@ -118,16 +134,14 @@
 
 .cadre {
     border-radius: 50px;
-    padding: 3rem;
+    padding: 3rem;    
     box-shadow: .3rem .3rem .7rem .4rem rgb(31, 31, 31);
     background: linear-gradient(196deg, rgba(226, 92, 193, 0.8), rgba(255,0,0,0) 50.71%),
                 linear-gradient(146deg, rgba(33, 33, 218, 0.8), rgba(0,0,255,0) 70.71%),
                 linear-gradient(336deg, rgba(41, 1, 68, 0.8), rgba(0,0,255,0) 70.71%);
+    width: 40rem;
+    height: 45rem;
 }
-
-/*.form1 {
-    display: flex;
-}*/
 
 .container-contact h3 {
     font-size: 3rem;
@@ -135,13 +149,36 @@
     text-align: center;
 }
 
-li {
+form {
     display: grid;
+    align-items: center;
+    justify-items: center;
+    zoom: 60%;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+#subject {
+    width: 64rem;
+}
+
+.subject {
+    display: grid;
+    grid-column: 1 / 3;
+}
+
+.msg {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
 }
 
 #msg {
     height: 25rem;
-    width: 29rem;
+    width: 63rem;
     border-radius: 20px;
     align-self: center;
     font-size: 1.2rem;
@@ -150,16 +187,22 @@ li {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.btn-c {
+    margin: 3rem 19rem 0 0;
+    height: 3rem;
+    font-weight: 900;
+}
+
 .info {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem 0 2rem 0;
 }
 
 .info i {
-    justify-content: space-evenly;
+    padding: 0 0.5rem 0 2rem;
 }
 
 .info h4 {
-    text-align: start;
+    font-weight: 100;
 }
