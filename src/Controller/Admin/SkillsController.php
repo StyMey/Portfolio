@@ -14,17 +14,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SkillsController extends AbstractController
 {
-    #[Route('/skills', name: 'skills')]
+    #[Route('/admin/skills', name: 'skills_')]
     public function index(SkillsRepository $repository): Response
     {
         $skillss = $repository->findAll();
 
-        return $this->render('skills/index.html.twig', [
+        return $this->render('admin/skills/index.html.twig', [
             'skillss' => $skillss
         ]);
     }
 
-    #[Route('/skills/new', name: 'skills_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $skills = new Skills();
@@ -44,13 +44,13 @@ class SkillsController extends AbstractController
             return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('/skills/new.html.twig', [
+        return $this->render('admin/skills/new.html.twig', [
             'skills' => $skills,
             'formSkills' => $formSkills->createView(),
         ]);
     }
 
-    #[Route('/skills/{id}/edit', name: 'skills_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/edit', name: 'edit', methods: ['GET', 'POST'])]
     public function edit(Skills $skills, Request $request, EntityManagerInterface $entityManager): Response
     {
         $formSkills = $this->createForm(SkillsType::class, $skills);
@@ -69,13 +69,13 @@ class SkillsController extends AbstractController
             return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
         }
     
-    return $this->render('skills/edit.html.twig', [
+    return $this->render('admin/skills/edit.html.twig', [
         'skills' => $skills,
         'formSkills' => $formSkills->createView(),
     ]);
     }
 
-    #[Route('/skills/{id}/delete', name: 'skills_delete', methods: ['GET'])]
+    #[Route('/{id}/delete', name: 'delete', methods: ['GET'])]
     public function delete(Skills $skills, EntityManagerInterface $entityManager): Response
     {
         $entityManager->remove($skills);

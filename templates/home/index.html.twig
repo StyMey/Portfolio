@@ -7,7 +7,7 @@
     <div class="home-content">
         <h3>Bonjour, moi c'est</h3>
         <h1>Stéphanie Meyer</h1>
-        <h3>Je suis <span>{#{{ user.job }}#}Développeuse Web Junior</span></h3>
+        <h3>Je suis <span class="multiple-text">{#{{ user.job }}#}</span></h3>
     </div>
     <div class="home-img">
         <img src="{{ asset("images/avatar-rogne.png") }}" alt="Mon avatar">
@@ -16,20 +16,25 @@
 <section class="profil-p" id="Profil">
     <div class="aboutme">
         <h3>A propos de moi</h3>
-        <p>Après plus de 15 années dans le secteur de l'industrie 
-        nautique, j’ai choisi de me reconvertir dans le Développement 
-        Web. A la suite d’une formation intensive, je recherche un 
-        stage me permettant de compléter ma formation, d’approfondir 
-        mes compétences, de mettre en avant mon adaptabilité et ma 
-        détermination au sein d'un environnement dynamique.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit 
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-        occaecat cupidatat non proident, sunt in culpa qui officia 
-        deserunt mollit anim id est laborum</p>
+        <p>Bienvenue sur mon portfolio !
+        <br>
+        Je suis ravie de vous accueillir dans mon espace créatif où 
+        je partage avec vous une sélection de mes projets et 
+        réalisations. À travers cette page, je vous invite à 
+        découvrir mon parcours professionnel et mes compétences 
+        développés grâce à la fomation intensive et certifiante de 
+        Développeur Web et Web mobile que j'ai efféctué récemment. 
+        <br>
+        Chaque projet présenté dans ce portfolio est 
+        le fruit d'un travail acharné, d'une réflexion approfondie 
+        et d'une recherche constante de l'excellence.
+        <br>
+        N'hésitez pas à parcourir mon portfolio et à me contacter 
+        si vous avez des questions ou si vous 
+        souhaitez discuter d'une collaboration potentielle. Je 
+        suis toujours à la recherche de nouveaux défis et de 
+        nouvelles opportunités de mettre mon talent au service de 
+        projets passionnants et innovants.</p>
     </div>
     <div class="skills">
         <h3>Compétences</h3>
@@ -50,20 +55,6 @@
             <h4>"{{projet.name}}"</h4>
             <p>"{{ projects.description }}"</p>
         {% endfor %} #}
-        <article class="card">{#wg#}
-            <header>
-                <h4>Wildy Gaming</h4>
-            </header>    
-                <img src="{{ asset("images/wildygaming.png") }}" alt="Wildy Gaming">
-                <img src="{{ asset("images/wildygaming2.png") }}" alt="Wildy Gaming">
-                <img src="{{ asset("images/wildygaming3.png") }}" alt="Wildy Gaming">
-                <img src="{{ asset("images/wildygaming4.png") }}" alt="Wildy Gaming">
-            <div class="content">
-                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                aliqua.</p>
-            </div>
-        </article>
         <article class="card">
             <header>
                 <h4>Wild Tour</h4>
@@ -74,9 +65,10 @@
                 <img src="{{ asset("images/wildtour5.png") }}" alt="Wild Tour">
                 <img src="{{ asset("images/wildtour6.png") }}" alt="Wild Tour">
             <div class="content">
-                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                aliqua.</p>
+                <p class="card-p">C'est le premier projet sur lequel j'ai travaillé
+                pendant ma formation. Il s'agit d'un site vitrine regroupant des activités
+                dans le secteur géographique des personnes ayant travailler sur le projet.
+                <br><br>Stack utilisé:<br>HTML, CSS, PHP.</p>
             </div>
         </article>
         <article class="card">
@@ -87,9 +79,28 @@
                 <img src="{{ asset("images/strasgite2.png") }}" alt="Stras'Gite">
                 <img src="{{ asset("images/strasgite3.png") }}" alt="Stras'Gite">
             <div class="content">
-                <p class="card-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                aliqua.</p>
+                <p class="card-p">Projet numéro 2. Le thème à été imposé par le formateur, 
+                il s'agit d'un site de réservation de chambre d'hôte avec pour but la 
+                fidélisation des clients et plus particulièrement les parlemantaires (étant 
+                donné que les chambres se situent à côté du parlement européen à Strasbourg).
+                <br><br>Stack utilisé:<br>HTML, CSS, PHP, Twig, SQL, JS, Composer, MVC.</p>
+            </div>
+        </article>
+        <article class="card">{#wg#}
+            <header>
+                <h4>Wildy Gaming</h4>
+            </header>    
+                <img src="{{ asset("images/wildygaming.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming2.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming3.png") }}" alt="Wildy Gaming">
+                <img src="{{ asset("images/wildygaming4.png") }}" alt="Wildy Gaming">
+            <div class="content">
+                <p class="card-p">Projet numéro 3 où nous avions pu choisir le thème parmis 
+                plusieurs choix. Il s'agit d'une création de site pour une salle d'arcade qui 
+                souhaitait attirer plus de monde dans son magasin via son site, en proposant 
+                des jeux jouables, à travers lesquels les joueurs avaient la possibilité de 
+                gagner des lots en fonction des points gagnés.
+                <br><br>Stack utilisé:<br>HTML, CSS, PHP/Symfony, Twig, SQL, JS.</p>
             </div>
         </article>
     </div>

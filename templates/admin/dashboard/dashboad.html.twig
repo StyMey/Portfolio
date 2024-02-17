@@ -1,0 +1,33 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}
+    {{ parent() }} Dashboard
+{% endblock %}
+
+{% block body %}
+    <body class="body-dashboard">
+
+        <div class="titles-dashboard">
+            <h1 class="h1-dashboard">Mon Dashboard</h1>
+            <h2 class="h2-dashboard">Bonjour Steph et bienvenue sur ta page de gestion de site!</h2>
+        </div>
+
+        <div class="buttons-dashboard">
+            <div class="block-dashboard">
+                <a href="{{ path('app_admin_skill_index') }}" class="text-btn-dashboard">Mes skills</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('app_admin_work_index') }}" class="text-btn-dashboard">Mes Projets</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('app_admin_user_index') }}" class="text-btn-dashboard">Mes informations personnelles</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('app_admin_image_index') }}" class="text-btn-dashboard">Mes images</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('app_admin_contact_index') }}" class="text-btn-dashboard">Mes contacts</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}
