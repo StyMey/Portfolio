@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Skills;
 use App\Form\SkillsType;
@@ -12,9 +12,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+#[Route('/admin/skills', name: 'skills_')]
 class SkillsController extends AbstractController
 {
-    #[Route('/admin/skills', name: 'skills_')]
+    #[Route('/', name: 'index')]
     public function index(SkillsRepository $repository): Response
     {
         $skillss = $repository->findAll();
@@ -41,7 +42,7 @@ class SkillsController extends AbstractController
                 'Le skill a été ajouté avec succès'
             );
 
-            return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('admin/skills/new.html.twig', [
@@ -66,7 +67,7 @@ class SkillsController extends AbstractController
                 'Le skill a été modifié avec succès'
             );
 
-            return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
     
     return $this->render('admin/skills/edit.html.twig', [
@@ -86,6 +87,6 @@ class SkillsController extends AbstractController
             'Le skill a été supprimé avec succès'
         );
 
-        return $this->redirectToRoute('skills', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
     }
 }

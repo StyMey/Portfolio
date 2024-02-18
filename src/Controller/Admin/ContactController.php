@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
@@ -33,6 +33,11 @@ class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'Le contact a été ajouté avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -59,6 +64,11 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'Le contact a été modifié avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -75,6 +85,11 @@ class ContactController extends AbstractController
             $entityManager->remove($contact);
             $entityManager->flush();
         }
+
+        $this->addFlash(
+            'notice',
+            'Le contact a été supprimé avec succès'
+        );
 
         return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
     }

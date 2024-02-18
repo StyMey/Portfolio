@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Projects;
 use App\Form\ProjectsType;
@@ -33,6 +33,11 @@ class ProjectsController extends AbstractController
             $entityManager->persist($project);
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'Le programe a été ajouté avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -59,6 +64,11 @@ class ProjectsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'Le projet a été modifié avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -75,6 +85,11 @@ class ProjectsController extends AbstractController
             $entityManager->remove($project);
             $entityManager->flush();
         }
+
+        $this->addFlash(
+            'notice',
+            'Le projet a été supprimé avec succès'
+        );
 
         return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
     }

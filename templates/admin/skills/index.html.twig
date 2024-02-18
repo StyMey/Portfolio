@@ -3,43 +3,47 @@
 {% block title %}Mes Skills{% endblock %}
 
 {% block body %}
-<h1 class="h1-skills">Mes Skills</h1>
-<div class="msg-flash">
-    {% for message in app.flashes('notice') %}
-        <div class="flash-success">
-            <h5>{{ message }}</h5>
+<div class="cont-s">
+    <div class="skills-container">
+        <h1 class="h1-skills">Mes Skills</h1>
+        <div class="msg-flash">
+            {% for message in app.flashes('notice') %}
+                <div class="flash-success">
+                    <h5>{{ message }}</h5>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+        <table class="container-s">  
+            <a class="btn-new-s" type="button" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
+            <thead>
+                <tr>
+                    <th class="th-skills1">Id</th>
+                    <th class="th-skills2">Nom</th>
+                    <th class="th-skills3">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for skills in skillss %}
+                <tr class="tr-skills">
+                    <td class="td-skills1">{{ skills.id }}</td>
+                    <td class="td-skills2">{{ skills.name }}</td>
+                    <td class="td-skills3">
+                        <a href="{{ path('skills_edit', {'id':skills.id}) }}" class="edit">
+                            <i class='bx bx-edit-alt'></i>
+                        </a>
+                        <br>
+                        <a href="{{ path('skills_delete', {'id':skills.id}) }}" class="delete">
+                            <i class='bx bx-trash'></i>
+                        </a>
+                    </td>
+                </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5">no records found</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
-<table class="container-s">  
-    <a class="btn-new-s" type="button" href="{{ path('skills_new')}}">Ajouter un nouveau skill</a>
-    <thead>
-        <tr>
-            <th class="th-skills1">Id</th>
-            <th class="th-skills2">Nom</th>
-            <th class="th-skills3">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for skills in skillss %}
-        <tr class="tr-skills">
-            <td class="td-skills1">{{ skills.id }}</td>
-            <td class="td-skills2">{{ skills.name }}</td>
-            <td class="td-skills3">
-                <a href="{{ path('skills_edit', {'id':skills.id}) }}" class="edit">
-                    <i class='bx bx-edit-alt'></i>
-                </a>
-                <br>
-                <a href="{{ path('skills_delete', {'id':skills.id}) }}" class="delete">
-                    <i class='bx bx-trash'></i>
-                </a>
-            </td>
-        </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
 {% endblock %}

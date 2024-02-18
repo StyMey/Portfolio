@@ -7,7 +7,7 @@
         <a class="ml" dir="rtl" href="">Mentions légales</a>
         {% if app.user %}
         <div class="container-link-profil">        
-            <a class="connexion" dir="rtl" href="{{ path('home') }}">Dashboard</a>
+            <a class="connexion" dir="rtl" href="{{ path('admin_dashboard') }}">Dashboard</a>
             <a class="connexion" dir="rtl" href="{{ path('app_logout') }}">Déconnexion</a>
         </div>
         {% else %}

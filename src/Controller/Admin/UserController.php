@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Form\UserType;
@@ -33,6 +33,11 @@ class UserController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'L\'utilisateur a été ajouté avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -59,6 +64,11 @@ class UserController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'L\utilisateur a été modifié avec succès'
+            );
+
             return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -75,6 +85,11 @@ class UserController extends AbstractController
             $entityManager->remove($user);
             $entityManager->flush();
         }
+
+        $this->addFlash(
+            'notice',
+            'L\'utilisateur a été supprimé avec succès'
+        );
 
         return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
     }

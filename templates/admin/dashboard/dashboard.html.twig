@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+<div class="cont">
+    <div class="dashboard">
+        <h1 class="h1-dashboard">Mon Dashboard</h1>
+        <div class="buttons-dashboard">
+            <div class="block-dashboard">
+                <a href="{{ path('skills_index') }}" class="text-btn-dashboard">Mes skills</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('projects_index') }}" class="text-btn-dashboard">Mes Projets</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('user_index') }}" class="text-btn-dashboard">Mes informations personnelles</a>
+            </div>
+            <div class="block-dashboard">
+                <a href="{{ path('contact_index') }}" class="text-btn-dashboard">Mes contacts</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
