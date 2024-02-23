@@ -1,0 +1,9 @@
+.user-container {
+    display: flex;
+    padding: 11vh;
+    justify-content: center;
+}
+
+.table  {
+    display: grid;
+}
