@@ -38,14 +38,9 @@
     </div>
     <div class="skills">
         <h3>Compétences</h3>
-        <div class="skills-s">HTML</div>
-        <div class="skills-s">CSS</div>
-        <div class="skills-s">PHP</div>
-        <div class="skills-s">Symfony</div>
-        <div class="skills-s">MySQL</div>
-        <div class="skills-s">JavaScript</div>
-        <div class="skills-s">Figma</div>
-        <div class="skills-s">GitHub</div>
+        {% for skills in skillss %}
+            <div class="skills-s">{{ skills.name }}</div>
+        {% endfor %}
     </div>
 </section>
 <section class="portfolio-p" id="Projets">
