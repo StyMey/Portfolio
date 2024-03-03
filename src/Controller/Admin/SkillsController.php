@@ -42,7 +42,7 @@ class SkillsController extends AbstractController
                 'Le skill a été ajouté avec succès'
             );
 
-            return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('skills_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('admin/skills/new.html.twig', [
@@ -67,7 +67,7 @@ class SkillsController extends AbstractController
                 'Le skill a été modifié avec succès'
             );
 
-            return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('skills_index', [], Response::HTTP_SEE_OTHER);
         }
     
     return $this->render('admin/skills/edit.html.twig', [
@@ -87,6 +87,6 @@ class SkillsController extends AbstractController
             'Le skill a été supprimé avec succès'
         );
 
-        return $this->redirectToRoute('index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('skills_index', [], Response::HTTP_SEE_OTHER);
     }
 }

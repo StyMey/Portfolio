@@ -7,3 +7,7 @@
 .table  {
     display: grid;
 }
+
+.container-nu {
+    padding: 11vh;
+}
