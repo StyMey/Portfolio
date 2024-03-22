@@ -1,0 +1,13 @@
+.container-np {
+    padding: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sk-project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem 39vh;
+}

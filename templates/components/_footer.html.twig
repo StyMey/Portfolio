@@ -3,14 +3,16 @@
         <a href="https://www.linkedin.com/in/st%C3%A9phanie-meyer-49537b6a/"><i class='bx bxl-linkedin'></i></a>
         <a href="https://github.com/StyMey?tab=repositories"><i class='bx bxl-github'></i></a>
     </div>
-    <a class="ml" dir="rtl" href="">Mentions légales</a>
-    {% if app.user %}
-    <div class="container-link-profil">        
-        <a class="connexion" dir="rtl" href="{{ path('home') }}">Dashboard</a>
-        <a class="connexion" dir="rtl" href="{{ path('app_logout') }}">Déconnexion</a>
+    <div class="footer-menu">
+        <a class="ml" dir="rtl" href="">Mentions légales</a>
+        {% if app.user %}
+        <div class="container-link-profil">        
+            <a class="connexion" dir="rtl" href="{{ path('admin_dashboard') }}">Dashboard</a>
+            <a class="connexion" dir="rtl" href="{{ path('app_logout') }}">Déconnexion</a>
+        </div>
+        {% else %}
+            <a class="connexion" dir="rtl" href="{{ path('app_login') }}">Connexion</a>
+        {% endif %}
+        <a href="#" class="button"><i class='bx bxs-hand-up'></i></a>
     </div>
-    {% else %}
-        <a class="connexion" dir="rtl" href="{{ path('app_login') }}">Connexion</a>
-    {% endif %}
-    <a href="#" class="button"><i class='bx bxs-hand-up'></i></a>
 </footer>

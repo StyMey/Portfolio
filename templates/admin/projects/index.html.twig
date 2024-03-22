@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Project{% endblock %}
+
+{% block body %}
+    <h1>Mes projets</h1>
+    <div class="msg-flash">
+    {% for message in app.flashes('notice') %}
+        <div class="flash-success">
+            <h5>{{ message }}</h5>
+        </div>
+    {% endfor %}
+    </div>
+    <table class="table">
+        <a class="btn-new-s" type="button" href="{{ path('projects_new') }}">Ajouter un nouveau</a>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for project in projects %}
+            <tr>
+                <td>{{ project.id }}</td>
+                <td>{{ project.name }}</td>
+                <td>{{ project.description }}</td>
+                <td>{{ project.image }}</td>
+                <td>
+                    <a href="{{ path('projects_show', {'id': project.id}) }}" class="edit">
+                        <i class='bx bx-edit-alt'></i>
+                    </a>
+                    <a href="{{ path('projects_edit', {'id': project.id}) }}" class="delete">
+                        <i class='bx bx-trash'></i>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

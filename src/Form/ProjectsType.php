@@ -19,10 +19,13 @@ class ProjectsType extends AbstractType
             ->add('image')
             ->add('skills', EntityType::class, [
                 'class' => Skills::class,
-'choice_label' => 'id',
-'multiple' => true,
-            ])
-        ;
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true,
+            'attr' => [
+                'class' => 'sk-project'
+            ]
+        ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

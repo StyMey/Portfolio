@@ -1,0 +1,13 @@
+.user-container {
+    display: flex;
+    padding: 11vh;
+    justify-content: center;
+}
+
+.table  {
+    display: grid;
+}
+
+.container-nu {
+    padding: 11vh;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau skills{% endblock %}
+
+{% block body %}
+<div class="cont-ns">
+    <div class="container-ns">
+        
+        <h1 class="h1-skills">Ajout d'un nouveau skill<h1>
+
+        {{ form_start(formSkills) }}
+
+        <div class="form-group">
+            {{ form_label(formSkills.name) }}
+            {{ form_widget(formSkills.name) }}
+            <div class="uk-alert-danger" uk-alert>
+                <a href class="uk-alert-close" uk-close></a>
+                <p>{{ form_errors(formSkills.name) }}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(formSkills.cathegory) }}
+            {{ form_widget(formSkills.cathegory) }}            
+        </div>
+        <div class="form-group">
+            {{ form_row(formSkills.submit) }}
+        </div>
+
+        {{ form_end(formSkills) }}
+
+    </div>
+</div>
+{% endblock %}

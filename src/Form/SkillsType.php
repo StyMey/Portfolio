@@ -34,18 +34,17 @@ class SkillsType extends AbstractType
                     'class' => 'cat_label'
                 ],
             ])
-            //->add('projects', EntityType::class, [
-                //'class' => Projects::class,
-                //'choice_label' => 'id',
-                //'multiple' => true,
-            //])
+            /*{#->add('projects', EntityType::class, [
+                'class' => Projects::class,
+                'choice_label' => 'id',
+                'multiple' => true,
+            ])*/
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary'
                 ],
                 'label' => 'Valider'
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

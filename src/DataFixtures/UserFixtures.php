@@ -22,7 +22,8 @@ class UserFixtures extends Fixture
         $user->setPhonenumber('0669690942');
         $user->setEmail('stephanie2510@gmail.com');
         $user->setLocalisation('Les sables d\'Olonne +/- 30km');
-        $user->setPassword($this->userPassHasher->hashPassword($user, 'jesuisCodeuse67'));
+        $bla = $this->userPassHasher->hashPassword($user, 'jesuisCodeuse67');
+        $user->setPassword($bla);
         $user->setAboutme('Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna 
         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 

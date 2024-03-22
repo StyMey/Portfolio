@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <h1>Liste des contacts</h1>
+    <div class="msg-flash">
+    {% for message in app.flashes('notice') %}
+        <div class="flash-success">
+            <h5>{{ message }}</h5>
+        </div>
+    {% endfor %}
+    </div>
+    <table class="table">
+        <a class="btn-new-s" type="button" href="{{ path('contact_new') }}">Ajouter un nouveau</a>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>N° de téléphone</th>
+                <th>Message</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.firstname }}</td>
+                <td>{{ contact.lastname }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phonenumber }}</td>
+                <td>{{ contact.message }}</td>
+                <td>
+                    <a href="{{ path('contact_show', {'id': contact.id}) }}" class="edit">
+                        <i class='bx bx-edit-alt'></i>
+                    </a>
+                    <a href="{{ path('contact_edit', {'id': contact.id}) }}" class="delete">
+                        <i class='bx bx-trash'></i>
+                    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

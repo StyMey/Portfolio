@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <h1>Mes informations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Mot de passe</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ user.name }}</td>
+            </tr>
+            <tr>
+                <th>N° de téléphone</th>
+                <td>{{ user.phonenumber }}</td>
+            </tr>
+            <tr>
+                <th>Localisation</th>
+                <td>{{ user.localisation }}</td>
+            </tr>
+            <tr>
+                <th>A propos de moi</th>
+                <td>{{ user.aboutme }}</td>
+            </tr>
+            <tr>
+                <th>Job</th>
+                <td>{{ user.job }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn-new-s" type="button" href="{{ path('user_index') }}">Revenir à la liste</a>
+
+    <a class="btn-new-s" type="button" href="{{ path('user_edit', {'id': user.id}) }}">Modifier</a>
+
+    {{ include('admin/user/_delete_form.html.twig') }}
+{% endblock %}
